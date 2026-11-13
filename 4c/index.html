@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#cdebff">
+  <title>Arcade 4C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/lobby.css">
+  <link rel="stylesheet" href="4c.css">
+</head>
+<body>
+  <p class="loading" id="loading">Abriendo tu arcade…</p>
+
+  <main class="wrap" id="app" hidden>
+    <header class="top">
+      <div class="title-block">
+        <h1 id="hello">¡Hola!</h1>
+        <p class="lede">Tu arcade de 4C. Un regalo de tu profe para el descanso.</p>
+      </div>
+      <div class="stamp" id="stamp" aria-label="Tu nivel">
+        <span class="label">Nivel</span>
+        <span class="tier" id="tier-name"></span>
+        <span class="count" id="tier-count"></span>
+      </div>
+    </header>
+
+    <section class="panel message" id="message" hidden>
+      <h2 class="section-title" id="message-title">Un mensaje especial para ti</h2>
+      <div class="clips" id="clips"></div>
+    </section>
+
+    <h2 class="section-title games-title">Tus juegos</h2>
+    <ul class="games" id="games"></ul>
+
+    <section class="panel gallery" id="gallery" hidden>
+      <h2 class="section-title">Nuestro año en 4C</h2>
+      <div class="frame" id="frame">
+        <img id="photo" alt="Foto del grupo 4C">
+        <button class="nav prev" type="button" id="prev" aria-label="Foto anterior">‹</button>
+        <button class="nav next" type="button" id="next" aria-label="Foto siguiente">›</button>
+        <p class="counter" id="counter"></p>
+      </div>
+      <p class="gallery-controls"><button class="chip" type="button" id="autoplay">⏸ Pausar</button></p>
+    </section>
+
+    <section class="care">
+      <h2>Juega con cuidado</h2>
+      <ul>
+        <li>Si te piden un nombre, inventa un apodo. Nunca pongas tu apellido ni tu colegio.</li>
+        <li>Si aparece un anuncio, ciérralo sin tocar nada más.</li>
+        <li>Esta página y tu tarjeta son solo tuyas: no compartas el código ni las fotos.</li>
+      </ul>
+    </section>
+
+    <p class="credit">Cada juego es de sus creadores. Esta página solo reúne los enlaces.
+      <button class="linklike" type="button" id="forget">Olvidar mi tarjeta en este dispositivo</button></p>
+  </main>
+
+  <main class="wrap lock" id="lock" hidden>
+    <div class="lock-card">
+      <h1>Arcade 4C</h1>
+      <p id="lock-msg">Esta página es solo para estudiantes de 4C. Escanea el código de tu tarjeta para entrar.</p>
+    </div>
+  </main>
+
+  <noscript><p class="lock-card">Para ver tu arcade, activa JavaScript en el navegador.</p></noscript>
+  <script src="../assets/games.js"></script>
+  <script src="4c.js"></script>
+</body>
+</html>
